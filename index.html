@@ -48,12 +48,16 @@
       justify-content: space-between;
     }
     .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 20px;
       font-weight: 700;
       letter-spacing: 0.04em;
       color: var(--color-primary);
       text-decoration: none;
     }
+    .nav-logo svg { width: 32px; height: 32px; }
     .nav-links {
       display: flex;
       gap: 32px;
@@ -313,7 +317,23 @@
 <!-- Navigation -->
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="#">Stellaria</a>
+    <a class="nav-logo" href="#">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.5" fill="none">
+        <g transform="translate(50,50)">
+          <ellipse rx="11" ry="34" transform="rotate(0)"/>
+          <ellipse rx="11" ry="34" transform="rotate(20)"/>
+          <ellipse rx="11" ry="34" transform="rotate(40)"/>
+          <ellipse rx="11" ry="34" transform="rotate(60)"/>
+          <ellipse rx="11" ry="34" transform="rotate(80)"/>
+          <ellipse rx="11" ry="34" transform="rotate(100)"/>
+          <ellipse rx="11" ry="34" transform="rotate(120)"/>
+          <ellipse rx="11" ry="34" transform="rotate(140)"/>
+          <ellipse rx="11" ry="34" transform="rotate(160)"/>
+          <circle r="1.5" fill="currentColor" stroke="none"/>
+        </g>
+      </svg>
+      Stellaria
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">サービス</a></li>
       <li><a href="#about">会社概要</a></li>
@@ -439,7 +459,23 @@
 <!-- Footer -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">Stellaria</div>
+    <div class="footer-logo" style="display:flex;align-items:center;justify-content:center;gap:10px;">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" stroke="white" stroke-width="2.5" fill="none" style="width:28px;height:28px;">
+        <g transform="translate(50,50)">
+          <ellipse rx="11" ry="34" transform="rotate(0)"/>
+          <ellipse rx="11" ry="34" transform="rotate(20)"/>
+          <ellipse rx="11" ry="34" transform="rotate(40)"/>
+          <ellipse rx="11" ry="34" transform="rotate(60)"/>
+          <ellipse rx="11" ry="34" transform="rotate(80)"/>
+          <ellipse rx="11" ry="34" transform="rotate(100)"/>
+          <ellipse rx="11" ry="34" transform="rotate(120)"/>
+          <ellipse rx="11" ry="34" transform="rotate(140)"/>
+          <ellipse rx="11" ry="34" transform="rotate(160)"/>
+          <circle r="1.5" fill="white" stroke="none"/>
+        </g>
+      </svg>
+      Stellaria
+    </div>
     <p>&copy; <span id="year"></span> Stellaria. All rights reserved.</p>
   </div>
 </footer>
