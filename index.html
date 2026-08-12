@@ -94,20 +94,29 @@
       min-height: 90vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(135deg, #f0f3ff 0%, #ffffff 60%);
+      background: url('hero.jpg') center/cover no-repeat;
+      position: relative;
       padding: 80px 24px;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10,20,40,0.55) 0%, rgba(10,20,40,0.3) 100%);
     }
     .hero-inner {
       max-width: var(--max-w);
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
     .hero-tag {
       display: inline-block;
       font-size: 12px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--color-accent);
-      background: rgba(79,110,247,0.08);
+      color: #fff;
+      background: rgba(255,255,255,0.2);
       padding: 4px 12px;
       border-radius: 20px;
       margin-bottom: 24px;
@@ -118,10 +127,11 @@
       line-height: 1.2;
       letter-spacing: -0.02em;
       margin-bottom: 24px;
+      color: #fff;
     }
     .hero-inner p {
       font-size: 18px;
-      color: var(--color-muted);
+      color: rgba(255,255,255,0.85);
       max-width: 520px;
       margin-bottom: 40px;
     }
@@ -197,6 +207,13 @@
     }
     .service-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
     .service-card p { font-size: 14px; color: var(--color-muted); line-height: 1.8; }
+    .service-card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
 
     /* ── About ── */
     .about-grid {
@@ -206,6 +223,14 @@
       align-items: center;
     }
     .about-text p { color: var(--color-muted); margin-bottom: 16px; }
+    .about-brand-img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      margin-bottom: 32px;
+      display: block;
+    }
     .about-table { width: 100%; border-collapse: collapse; font-size: 14px; }
     .about-table tr { border-bottom: 1px solid var(--color-border); }
     .about-table tr:first-child { border-top: 1px solid var(--color-border); }
@@ -352,6 +377,7 @@
     <p class="section-lead">雨や悪天候の日でも、ストレスなく日常を楽しめるプロダクトを提供します。</p>
     <div class="services-grid">
       <div class="service-card">
+        <img src="product.jpg" alt="レインウェア" class="service-card-img">
         <div class="service-icon">🌧️</div>
         <h3>レインウェア</h3>
         <p>機能性とデザイン性を両立したレインウェアを開発。雨の日でもスタイリッシュに、快適に過ごせる一着を目指します。</p>
@@ -377,6 +403,7 @@
     <h2 class="section-title">会社概要</h2>
     <div class="about-grid">
       <div class="about-text">
+        <img src="brand.jpg" alt="ハコベと安曇野の雨" class="about-brand-img">
         <p>Stellariaは、「雨の日も、快適に。」をミッションに掲げ、令和2年に設立されたプロダクト開発企業です。</p>
         <p>レインウェアをはじめ、悪天候でも快適に日常を送るためのプロダクトを企画・研究開発しています。テクノロジーとクリエイティビティを融合させ、機能性とデザイン性の高い製品を世に届けます。</p>
         <p>「天気に左右されない毎日」を実現するため、私たちは日々プロダクトと向き合い続けます。</p>
